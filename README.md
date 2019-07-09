@@ -153,7 +153,9 @@ let thirdCondition = z == thirdReallyReallyLongPredicateFunction()
 if firstCondition && secondCondition && thirdCondition {
     // do something
 }
+```
 
+```swift
 // NOT PREFERRED
 if x == firstReallyReallyLongPredicateFunction()
     && y == secondReallyReallyLongPredicateFunction()
@@ -180,7 +182,9 @@ class MyClassName {
     static let indianaPi = 3
     static let shared = MyClassName()
 }
+```
 
+```swift
 // NOT PREFERRED
 class MyClassName {
     // Don't use `k`-prefix
@@ -210,7 +214,9 @@ protocol Sequence {
 ```swift
 // PREFERRED
 class RoundAnimatingButton: UIButton { /* ... */ }
+```
 
+```swift
 // NOT PREFERRED
 class CustomButton: UIButton { /* ... */ }
 ```
@@ -227,7 +233,9 @@ class RoundAnimatingButton: UIButton {
     }
 
 }
+```
 
+```swift
 // NOT PREFERRED
 class RoundAnimating: UIButton {
     let aniDur: NSTimeInterval
@@ -267,7 +275,9 @@ class ConnectionTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
 
 }
+```
 
+```swift
 // NOT PREFERRED
 class ConnectionTableViewCell: UITableViewCell {
     // this isn't a `UIImage`, so shouldn't be called image
@@ -347,17 +357,23 @@ protocol InputTextViewProtocol {
 // PREFERRED
 let stringOfInts = [1, 2, 3].flatMap { String($0) }
 // ["1", "2", "3"]
+```
 
+```swift
 // NOT PREFERRED
 var stringOfInts: [String] = []
 for integer in [1, 2, 3] {
     stringOfInts.append(String(integer))
 }
+```
 
+```swift
 // PREFERRED
 let evenNumbers = [4, 8, 15, 16, 23, 42].filter { $0 % 2 == 0 }
 // [4, 8, 16, 42]
+```
 
+```swift
 // NOT PREFERRED
 var evenNumbers: [Int] = []
 for integer in [4, 8, 15, 16, 23, 42] {
@@ -410,7 +426,9 @@ myFunctionWithEscapingClosure() { [weak self] (error) -> Void in
 if x == y {
     /* ... */
 }
+```
 
+```swift
 // NOT PREFERRED
 if (x == y) {
     /* ... */
@@ -422,7 +440,9 @@ if (x == y) {
 ```swift
 // PREFERRED
 imageView.setImageWithURL(url, type: .person)
+```
 
+```swift
 // NOT PREFERRED
 imageView.setImageWithURL(url, type: AsyncImageView.Type.person)
 ```
@@ -458,7 +478,9 @@ do {
 ```swift
 // PREFERRED
 private static let myPrivateNumber: Int
+```
 
+```swift
 // NOT PREFERRED
 static private let myPrivateNumber: Int
 ```
@@ -470,7 +492,9 @@ static private let myPrivateNumber: Int
 open class Pirate {
     /* ... */
 }
+```
 
+```swift
 // NOT PREFERRED
 open
 class Pirate {
@@ -557,7 +581,9 @@ func handleDigit(_ digit: Int) throws {
 if someOptional != nil {
     // do something
 }
+```
 
+```swift
 // NOT PREFERRED
 if let _ = someOptional {
     // do something
@@ -569,7 +595,9 @@ if let _ = someOptional {
 ```swift
 // PREFERRED
 weak var parentViewController: UIViewController?
+```
 
+```swift
 // NOT PREFERRED
 weak var parentViewController: UIViewController!
 unowned var parentViewController: UIViewController
@@ -611,7 +639,9 @@ extension MyViewController {
 extension MyViewController  {
 // scroll view delegate methods
 }
+```
 
+```swift
 // NOT PREFERRED
 class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
 // all methods
@@ -813,7 +843,9 @@ func eatDoughnut(at index: Int) {
     let doughnut = doughnuts[index]
     eat(doughnut)
 }
+```
 
+```swift
 // NOT PREFERRED
 func eatDoughnut(at index: Int) {
     if index >= 0 && index < doughnuts.count {
@@ -832,7 +864,9 @@ guard let monkeyIsland = monkeyIsland else {
 }
 bookVacation(on: monkeyIsland)
 bragAboutVacation(at: monkeyIsland)
+```
 
+```swift
 // NOT PREFERRED
 if let monkeyIsland = monkeyIsland {
     bookVacation(on: monkeyIsland)
@@ -875,7 +909,9 @@ if isFriendly {
 } else {
     print("You have the manners of a beggar.")
 }
+```
 
+```swift
 // NOT PREFERRED
 guard isFriendly else {
     print("You have the manners of a beggar.")
@@ -929,7 +965,9 @@ guard let thingThree = thingThree else {
 guard let thingOne = thingOne else {
     return
 }
+```
 
+```swift
 // NOT PREFERRED
 guard let thingOne = thingOne else { return }
 ```
