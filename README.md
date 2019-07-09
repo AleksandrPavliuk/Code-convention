@@ -951,21 +951,6 @@ guard let thingThree = thingThree else {
 }
 ```
 
-* **3.11.7** Don’t use one-liners for `guard` statements.
-
-
-```swift
-// PREFERRED
-guard let thingOne = thingOne else {
-    return
-}
-```
-
-```swift
-// NOT PREFERRED
-guard let thingOne = thingOne else { return }
-```
-
 ## 4. Documentation/Comments
 
 ### 4.1 Documentation
