@@ -957,20 +957,3 @@ guard let thingThree = thingThree else {
 
 * **4.1.1** Always leave a space after `//`.
 * **4.1.2** Always leave comments on their own line.
-* **4.1.3** When using `// MARK: - whatever`, leave a newline after the comment.
-
-```swift
-class Pirate {
-
-    // MARK: - instance properties
-
-    private let pirateName: String
-
-    // MARK: - initialization
-
-    init() {
-        /* ... */
-    }
-
-}
-```
