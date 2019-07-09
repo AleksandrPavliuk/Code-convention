@@ -498,8 +498,6 @@ let pirateName = "LeChuck"
 
 Prefer creating named functions to custom operators.
 
-If you want to introduce a custom operator, make sure that you have a *very* good reason why you want to introduce a new operator into global scope as opposed to using some other construct.
-
 You can override existing operators to support new types (especially `==`). However, your new definitions must preserve the semantics of the operator. For example, `==` must always test equality and return a boolean.
 
 ### 3.4 Switch Statements and `enum`s
@@ -548,7 +546,7 @@ func handleDigit(_ digit: Int) throws {
 
 ### 3.5 Optionals
 
-* **3.5.1** The only time you should be using implicitly unwrapped optionals is with `@IBOutlet`s. In every other case, it is better to use a non-optional or regular optional property. Yes, there are cases in which you can probably "guarantee" that the property will never be `nil` when used, but it is better to be safe and consistent. Similarly, don't use force unwraps.
+* **3.5.1** You should use implicitly unwrapped optionals with `@IBOutlet`s and in unit tests only. In every other case, it is better to use a non-optional or regular optional property. Yes, there are cases in which you can probably "guarantee" that the property will never be `nil` when used, but it is better to be safe and consistent. Similarly, don't use force unwraps.
 
 * **3.5.2** Don't use `as!` or `try!`.
 
