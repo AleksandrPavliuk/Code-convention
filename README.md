@@ -1,6 +1,20 @@
 # Code-convention
 
-Make sure to read [Apple's API Design Guidelines](https://swift.org/documentation/api-design-guidelines/).
+## Goals
+
+Following this style guide should:
+
+* Make it easier to read and begin understanding unfamiliar code.
+* Make code easier to maintain.
+* Reduce simple programmer errors.
+* Keep discussions on diffs focused on the code's logic rather than its style.
+
+Note that brevity is not a primary goal. Code should be made more concise only if other good code qualities (such as readability, simplicity, and clarity) remain equal or are improved.
+
+## Convention Tenets
+
+* This guide is in addition to the official [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/). These rules should not contradict that document.
+* These rules should not fight Xcode's <kbd>^</kbd> + <kbd>I</kbd> indentation behavior.
 
 ## Table Of Contents
 
@@ -957,3 +971,4 @@ guard let thingThree = thingThree else {
 
 * **4.1.1** Always leave a space after `//`.
 * **4.1.2** Always leave comments on their own line.
+
