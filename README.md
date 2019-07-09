@@ -594,6 +594,30 @@ Keep in mind that when using an extension, however, the methods in the extension
 
 Even when using method #2, add `// MARK:` statements anyway for easier readability in Xcode's method/property/class/etc. list UI.
 
+Since Xcode can't render class declaration in quick help during protocol conformance announced in extensions properly, it's better to put it after class declaration.
+
+```swift
+// PREFERRED
+class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
+// class stuff here
+}
+
+// MARK: - UITableViewDataSource
+extension MyViewController {
+// table view data source methods
+}
+
+// MARK: - UIScrollViewDelegate
+extension MyViewController  {
+// scroll view delegate methods
+}
+
+// NOT PREFERRED
+class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
+// all methods
+}
+```
+
 ### 3.7 Properties
 
 * **3.7.1** If making a read-only, computed property, provide the getter without the `get {}` around it.
