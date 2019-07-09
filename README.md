@@ -480,7 +480,7 @@ class Pirate {
 
 * **3.2.3** In general, do not write the `internal` access modifier keyword since it is the default.
 
-* **3.2.4** If a property needs to be accessed by unit tests, you will have to make it `internal` to use `@testable import ModuleName`. If a property *should* be private, but you declare it to be `internal` for the purposes of unit testing, make sure you add an appropriate bit of documentation commenting that explains this. You can make use of the `- warning:` markup syntax for clarity as shown below.
+* **3.2.4** If a property needs to be accessed by unit tests, you will have to make it `internal` to use `@testable import ModuleName`. If a property *should* be private, but you declare it to be `internal` for the purposes of unit testing, make sure you add an appropriate bit of documentation commenting that explains this. You can make use of the `- warning:` markup syntax for clarity as shown below. **!Important: creation of such properties is allowed only in extreme cases. Use public interface of instance/type for testing!**
 
 ```swift
 /**
