@@ -170,20 +170,7 @@ if x == firstReallyReallyLongPredicateFunction()
 
 * **2.3** Use `camelCase` (initial lowercase letter) for function, method, property, constant, variable, argument names, enum cases, etc.
 
-* **2.4** When dealing with an acronym or other name that is usually written in all caps, actually use all caps in any names that use this in code. The exception is if this word is at the start of a name that needs to start with lowercase - in this case, use all lowercase for the acronym.
-
-```swift
-// "HTML" is at the start of a constant name, so we use lowercase "html"
-let htmlBodyContent: String = "<p>Hello, World!</p>"
-// Prefer using ID to Id
-let profileID: Int = 1
-// Prefer URLFinder to UrlFinder
-class URLFinder {
-    /* ... */
-}
-```
-
-* **2.5** All constants that are instance-independent should be `static`. All such `static` constants should be placed in a marked section of their `class`, `struct`, or `enum`. For classes with many constants, you should group constants that have similar or the same prefixes, suffixes and/or use cases.
+* **2.4** All constants that are instance-independent should be `static`. All such `static` constants should be placed in a marked section of their `class`, `struct`, or `enum`. For classes with many constants, you should group constants that have similar or the same prefixes, suffixes and/or use cases.
 
 ```swift
 // PREFERRED    
@@ -206,7 +193,7 @@ class MyClassName {
 }
 ```
 
-* **2.6** For generics and associated types, use a `PascalCase` word that describes the generic. If this word clashes with a protocol that it conforms to or a superclass that it subclasses, you can append a `Type` suffix to the associated type or generic name.
+* **2.5** For generics and associated types, use a `PascalCase` word that describes the generic. If this word clashes with a protocol that it conforms to or a superclass that it subclasses, you can append a `Type` suffix to the associated type or generic name.
 
 ```swift
 class SomeClass<Model> { /* ... */ }
@@ -218,7 +205,7 @@ protocol Sequence {
 }
 ```
 
-* **2.7** Names should be descriptive and unambiguous.
+* **2.6** Names should be descriptive and unambiguous.
 
 ```swift
 // PREFERRED
@@ -228,7 +215,7 @@ class RoundAnimatingButton: UIButton { /* ... */ }
 class CustomButton: UIButton { /* ... */ }
 ```
 
-* **2.8** Do not abbreviate, use shortened names, or single letter names.
+* **2.7** Do not abbreviate, use shortened names, or single letter names.
 
 ```swift
 // PREFERRED
@@ -251,7 +238,7 @@ class RoundAnimating: UIButton {
 }
 ```
 
-* **2.9** Include type information in constant or variable names when it is not obvious otherwise.
+* **2.8** Include type information in constant or variable names when it is not obvious otherwise.
 
 ```swift
 // PREFERRED
@@ -320,9 +307,9 @@ class ConnectionTableViewCell: UITableViewCell {
 }
 ```
 
-* **2.10** When naming function arguments, make sure that the function can be read easily to understand the purpose of each argument.
+* **2.9** When naming function arguments, make sure that the function can be read easily to understand the purpose of each argument.
 
-* **2.11** As per [Apple's API Design Guidelines](https://swift.org/documentation/api-design-guidelines/), a `protocol` should be named as nouns if they describe what something is doing (e.g. `Collection`) and using the suffixes `able`, `ible`, or `ing` if it describes a capability (e.g. `Equatable`, `ProgressReporting`). If neither of those options makes sense for your use case, you can add a `Protocol` suffix to the protocol's name as well. Some example `protocol`s are below.
+* **2.10** As per [Apple's API Design Guidelines](https://swift.org/documentation/api-design-guidelines/), a `protocol` should be named as nouns if they describe what something is doing (e.g. `Collection`) and using the suffixes `able`, `ible`, or `ing` if it describes a capability (e.g. `Equatable`, `ProgressReporting`). If neither of those options makes sense for your use case, you can add a `Protocol` suffix to the protocol's name as well. Some example `protocol`s are below.
 
 ```swift
 // here, the name is a noun that describes what the protocol does
