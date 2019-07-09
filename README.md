@@ -953,93 +953,11 @@ guard let thingThree = thingThree else {
 
 ## 4. Documentation/Comments
 
-### 4.1 Documentation
+### 4.1 Commenting
 
-If a function is more complicated than a simple O(1) operation, you should generally consider adding a doc comment for the function since there could be some information that the method signature does not make immediately obvious. If there are any quirks to the way that something was implemented, whether technically interesting, tricky, not obvious, etc., this should be documented. Documentation should be added for complex classes/structs/enums/protocols and properties. All `public` functions/classes/properties/constants/structs/enums/protocols/etc. should be documented as well (provided, again, that their signature/name does not make their meaning/functionality immediately obvious).
-
-After writing a doc comment, you should option click the function/property/class/etc. to make sure that everything is formatted correctly.
-
-Be sure to check out the full set of features available in Swift's comment markup [described in Apple's Documentation](https://developer.apple.com/library/tvos/documentation/Xcode/Reference/xcode_markup_formatting_ref/Attention.html#//apple_ref/doc/uid/TP40016497-CH29-SW1).
-
-Guidelines:
-
-* **4.1.1** 160 character column limit (like the rest of the code).
-
-* **4.1.2** Even if the doc comment takes up one line, use block (`/** */`).
-
-* **4.1.3** Do not prefix each additional line with a `*`.
-
-* **4.1.4** Use the new `- parameter` syntax as opposed to the old `:param:` syntax (make sure to use lower case `parameter` and not `Parameter`). Option-click on a method you wrote to make sure the quick help looks correct.
-
-```swift
-class Human {
-    /**
-     This method feeds a certain food to a person.
-
-     - parameter food: The food you want to be eaten.
-     - parameter person: The person who should eat the food.
-     - returns: True if the food was eaten by the person; false otherwise.
-    */
-    func feed(_ food: Food, to person: Human) -> Bool {
-        // ...
-    }
-}
-```
-
-* **4.1.5** If you’re going to be documenting the parameters/returns/throws of a method, document all of them, even if some of the documentation ends up being somewhat repetitive (this is preferable to having the documentation look incomplete). Sometimes, if only a single parameter warrants documentation, it might be better to just mention it in the description instead.
-
-* **4.1.6** For complicated classes, describe the usage of the class with some potential examples as seems appropriate. Remember that markdown syntax is valid in Swift's comment docs. Newlines, lists, etc. are therefore appropriate.
-
-```swift
-/**
- ## Feature Support
-
- This class does some awesome things. It supports:
-
- - Feature 1
- - Feature 2
- - Feature 3
-
- ## Examples
-
- Here is an example use case indented by four spaces because that indicates a
- code block:
-
-     let myAwesomeThing = MyAwesomeClass()
-     myAwesomeThing.makeMoney()
-
- ## Warnings
-
- There are some things you should be careful of:
-
- 1. Thing one
- 2. Thing two
- 3. Thing three
- */
-class MyAwesomeClass {
-    /* ... */
-}
-```
-
-* **4.1.7** When mentioning code, use code ticks - \`
-
-```swift
-/**
- This does something with a `UIViewController`, perchance.
- - warning: Make sure that `someValue` is `true` before running this function.
- */
-func myFunction() {
-    /* ... */
-}
-```
-
-* **4.1.8** When writing doc comments, prefer brevity where possible.
-
-### 4.2 Other Commenting Guidelines
-
-* **4.2.1** Always leave a space after `//`.
-* **4.2.2** Always leave comments on their own line.
-* **4.2.3** When using `// MARK: - whatever`, leave a newline after the comment.
+* **4.1.1** Always leave a space after `//`.
+* **4.1.2** Always leave comments on their own line.
+* **4.1.3** When using `// MARK: - whatever`, leave a newline after the comment.
 
 ```swift
 class Pirate {
