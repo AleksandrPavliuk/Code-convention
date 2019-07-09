@@ -687,15 +687,7 @@ var computedProperty: String  {
 }
 ```
 
-* **3.7.4** You can declare a singleton property as follows:
-
-```swift
-class PirateManager {
-    static let shared = PirateManager()
-
-    /* ... */
-}
-```
+* **3.7.4** Avoid using singletons
 
 ### 3.8 Closures
 
