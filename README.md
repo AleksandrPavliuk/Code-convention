@@ -753,6 +753,7 @@ Suppose a function `myFunction` is supposed to return a `String`, however, at so
 Example:
 
 ```swift
+// NOT PREFERRED
 func readFile(named filename: String) -> String? {
     guard let file = openFile(named: filename) else {
         return nil
@@ -796,6 +797,7 @@ struct Error: Swift.Error {
 Example usage:
 
 ```swift
+// REFERRED
 func readFile(named filename: String) throws -> String {
     guard let file = openFile(named: filename) else {
         throw Error(message: "Unable to open file named \(filename).")
