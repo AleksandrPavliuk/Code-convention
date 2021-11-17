@@ -1,4 +1,4 @@
-# Code-convention
+# Coding conventions
 
 ## Goals
 
