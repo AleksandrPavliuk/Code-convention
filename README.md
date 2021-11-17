@@ -11,7 +11,7 @@ Following this style guide should:
 
 Note that brevity is not a primary goal. Code should be made more concise only if other good code qualities (such as readability, simplicity, and clarity) remain equal or are improved.
 
-## Convention Tenets
+## Conventions Tenets
 
 * This guide is in addition to the official [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/). These rules should not contradict that document.
 * These rules should not fight Xcode's <kbd>^</kbd> + <kbd>I</kbd> indentation behavior.
